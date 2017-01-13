@@ -2,9 +2,8 @@
     "name" : "sbnet/weatherbundle",
     "description" : "A symfony weather bundle",
     "type" : "symfony-bundle",
-    "version": "1.0.0-dev",
     "authors" : [{
-        "name" : "WeatherBundle",
+        "name" : "Stéphane BRUN",
         "email" : "stephane@sbnet.fr"
     }],
     "keywords" : [
@@ -26,6 +25,9 @@
         }
     },
     "target-dir" : "Sbnet/WeatherBundle",
-    "repositories" : [{
-    }]
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
 }
