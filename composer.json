@@ -7,7 +7,10 @@
         "email" : "stephane@sbnet.fr"
     }],
     "keywords" : [
-        "weather bundle"
+        "weather",
+        "bundle",
+        "symfony",
+        "open weather map"
     ],
     "license" : [
         "MIT"
