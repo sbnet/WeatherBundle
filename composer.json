@@ -21,10 +21,5 @@
     },
     "target-dir" : "Sbnet/WeatherBundle",
     "repositories" : [{
-    }],
-    "extra" : {
-    "branch-alias" : {
-            "dev-master" : "some_version-dev"
-        }
-    }
+    }]
 }

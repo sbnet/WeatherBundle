@@ -1,3 +1,7 @@
+# Informations
+
+This bundle uses the [OpenWeatherMap API](http://openweathermap.org/api)
+
 # License
 
 Copyright (c) 2015 Stephane BRUN
