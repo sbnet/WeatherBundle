@@ -1,0 +1,30 @@
+{
+    "name" : "sbnet/weatherbundle",
+    "description" : "A symfony weather bundle",
+    "type" : "symfony-bundle",
+    "authors" : [{
+        "name" : "WeatherBundle",
+        "email" : "stephane@sbnet.fr"
+    }],
+    "keywords" : [
+        "weather bundle"
+    ],
+    "license" : [
+        "MIT"
+    ],
+    "require" : {
+    },
+    "autoload" : {
+        "psr-0" : {
+            "Sbnet\\WeatherBundle" : ""
+        }
+    },
+    "target-dir" : "Sbnet/WeatherBundle",
+    "repositories" : [{
+    }],
+    "extra" : {
+    "branch-alias" : {
+            "dev-master" : "some_version-dev"
+        }
+    }
+}
