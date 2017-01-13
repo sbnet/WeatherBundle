@@ -2,6 +2,7 @@
     "name" : "sbnet/weatherbundle",
     "description" : "A symfony weather bundle",
     "type" : "symfony-bundle",
+    "version": "1.0.0-dev",
     "authors" : [{
         "name" : "WeatherBundle",
         "email" : "stephane@sbnet.fr"
