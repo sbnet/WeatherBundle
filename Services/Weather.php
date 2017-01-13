@@ -22,7 +22,7 @@ abstract class Weather
      * It uses the symfony cache system introduced in version 3.1
      *
      * @param string $url
-     * @return mixed[] Return the forecast data
+     * @return object Return the forecast data
      */
     public function getJsonFromUrl($url)
     {

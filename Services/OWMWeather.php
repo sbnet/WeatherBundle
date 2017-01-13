@@ -22,6 +22,13 @@ class OWMWeather extends Weather
         return $url;
     }
 
+    /**
+     * See http://openweathermap.org/forecast5
+     *
+     * @param float $lat Latitude
+     * @param float $lon Longitude
+     * @return object
+     */
     public function getForecastByCoord($lat, $lon)
     {
         $adr = $this->makeUrl("forecast?lat=$lat&lon=$lon");
