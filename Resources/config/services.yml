@@ -1,4 +1,22 @@
 services:
-   sbnet_weather.owm:
-       class: Sbnet\WeatherBundle\Services\OWMWeather
-       arguments: ["%sbnet_weather.owm.key%"]
+    sbnet.weather.owm:
+        class: Sbnet\WeatherBundle\Services\Weather
+        arguments:
+            - "@sbnet.weather.owmdriver"
+
+    sbnet.weather.wc:
+        class: Sbnet\WeatherBundle\Services\Weather
+        arguments:
+            - "@sbnet.weather.wcdriver"
+
+    sbnet.weather.owmdriver:
+        class: Sbnet\WeatherBundle\Services\OWMWeather
+        public: false
+        arguments:
+            - "%sbnet_weather.owm.key%"
+
+    sbnet.weather.wcdriver:
+        class: Sbnet\WeatherBundle\Services\WCWeather
+        public: false
+        arguments:
+            - "%sbnet_weather.wc.key%"

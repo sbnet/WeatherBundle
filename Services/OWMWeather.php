@@ -8,10 +8,22 @@
  */
 namespace  Sbnet\WeatherBundle\Services;
 
-class OWMWeather extends Weather
+class OWMWeather extends WeatherDriver implements WeatherDriverInterface
 {
     private $apiUrl = "http://api.openweathermap.org/data/2.5/";
     private $params = "units=metric&lang=fr";
+
+    protected $key = "";
+
+    function __construct($key)
+    {
+        $this->key = $key;
+    }
+
+    public function getKey()
+    {
+        return $this->key;
+    }
 
     private function makeUrl($adr)
     {
