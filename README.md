@@ -1,6 +1,9 @@
 # Informations
 
-This bundle uses the [OpenWeatherMap API](http://openweathermap.org/api)
+This bundle uses :
+ * The [OpenWeatherMap API](http://openweathermap.org/api) - This is a work in progress
+ * The [Weather Channel API](https://www.wunderground.com/weather/api) - This is planned
+ * The cache component available from the Symfony version 3.1
 
 # License
 

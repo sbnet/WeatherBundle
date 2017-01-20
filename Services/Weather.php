@@ -10,6 +10,9 @@ class Weather
         $this->driver = $driver;
     }
 
+    /**
+     *
+     */
     public function getForecastByCoord($lat, $lon)
     {
         return $this->driver->getForecastByCoord($lat, $lon);
