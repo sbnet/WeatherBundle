@@ -34,7 +34,12 @@ class WCWeather extends WeatherDriver implements WeatherDriverInterface
 
     public function getForecastByCoord($lat, $lon)
     {
-        $adr = $this->makeUrl("");
-        return $this->getJsonFromUrl($adr);
+        return false;
     }
+
+    public function getForecastByName($lat, $lon)
+    {
+        return false;
+    }
+
 }

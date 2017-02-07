@@ -46,4 +46,16 @@ class OWMWeather extends WeatherDriver implements WeatherDriverInterface
         $adr = $this->makeUrl("forecast?lat=$lat&lon=$lon");
         return $this->getJsonFromUrl($adr);
     }
+
+    /**
+     * See http://openweathermap.org/forecast5
+     *
+     * @param string $name For example : {city name},{country code}
+     * @return object
+     */
+    public function getForecastByName($name)
+    {
+        $adr = $this->makeUrl("forecast?q=$name");
+        return $this->getJsonFromUrl($adr);
+    }
 }

@@ -17,4 +17,9 @@ class Weather
     {
         return $this->driver->getForecastByCoord($lat, $lon);
     }
+
+    public function getForecastByName($name)
+    {
+        return $this->driver->getForecastByName($name);
+    }
 }
