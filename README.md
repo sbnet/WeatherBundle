@@ -11,6 +11,7 @@ This bundle uses :
 ```yaml
 "sbnet/weatherbundle": "dev-master"
 ```
+And activate it in your app/AppKernel.php file
 
 ## Configure your api key
 Put your key in the app/config/parameters.yml file
