@@ -15,7 +15,7 @@ class OWMWeather extends WeatherDriver implements WeatherDriverInterface
 
     protected $key = "";
 
-    function __construct($key)
+    public function __construct($key)
     {
         $this->key = $key;
     }

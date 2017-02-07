@@ -13,7 +13,7 @@ class WCWeather extends WeatherDriver implements WeatherDriverInterface
     private $apiUrl = "http://api.wunderground.com/api/";
     protected $key = "";
 
-    function __construct($key)
+    public function __construct($key)
     {
         $this->key = $key;
     }
@@ -34,5 +34,6 @@ class WCWeather extends WeatherDriver implements WeatherDriverInterface
 
     public function getForecastByCoord($lat, $lon)
     {
+        $adr = $this->makeUrl("");
     }
 }

@@ -16,9 +16,6 @@ abstract class WeatherDriver
     {
         $cache = new FilesystemAdapter();
 
-        // Just for testing, disable the cache
-        //$cache->deleteItem(md5('sbnet.weatherbundle.'.$url));
-
         $cjson = $cache->getItem(md5('sbnet.weatherbundle.'.$url));
 
         if (!$cjson->isHit()) {
