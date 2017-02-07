@@ -5,7 +5,7 @@ class Weather
 {
     protected $driver;
 
-    function __construct($driver)
+    public function __construct($driver)
     {
         $this->driver = $driver;
     }
