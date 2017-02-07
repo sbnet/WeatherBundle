@@ -5,6 +5,44 @@ This bundle uses :
  * The [Weather Channel API](https://www.wunderground.com/weather/api) - This is planned
  * The cache component available from the Symfony version 3.1
 
+# How to use this bundle
+
+## Just add it to your composer file
+```yaml
+"sbnet/weatherbundle": "dev-master"
+```
+
+## Configure your api key
+Put your key in the app/config/parameters.yml file
+
+For Open Weather Map
+```yaml
+sbnet_weather.owm.key: <key>
+```
+Or for the Weather Channel
+```yaml
+sbnet_weather.wc.key: <key>
+```
+
+## You can use it from your controller
+```php
+$weather = $this->container->get("sbnet.weather.owm");
+$forecast = $weather->getForecastByCoord(43.93332, 4.93333);
+```
+
+# Work in progress
+## Open Weather Map
+* getForecastByCoord()
+* ~~getForecastByName()~~
+* ~~getForecastById()~~
+* ~~getCurrentByCoord()~~
+* ~~getCurrentById()~~
+* ~~getCurrentByName()~~
+* ~~getIconUrlById()~~
+
+## Weather Channel
+This driver will be started when OWM driver will be finished
+
 # License
 
 Copyright (c) 2015 Stephane BRUN
