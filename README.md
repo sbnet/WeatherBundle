@@ -1,5 +1,7 @@
 # Informations
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/549b4d9d-c714-4b5f-bf9d-61ea98301bae/big.png)](https://insight.sensiolabs.com/projects/549b4d9d-c714-4b5f-bf9d-61ea98301bae)
+
 This bundle uses :
  * The [OpenWeatherMap API](http://openweathermap.org/api) - This is a work in progress
  * The [Weather Channel API](https://www.wunderground.com/weather/api) - This is planned
