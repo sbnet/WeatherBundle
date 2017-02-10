@@ -15,7 +15,6 @@ abstract class WeatherDriver
     public function getJsonFromUrl($url)
     {
         $cache = new FilesystemAdapter();
-$cache->deleteItem(md5('sbnet.weatherbundle.'.$url));
         $cjson = $cache->getItem(md5('sbnet.weatherbundle.'.$url));
 
         if (!$cjson->isHit()) {
