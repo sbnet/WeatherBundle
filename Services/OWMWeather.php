@@ -11,8 +11,8 @@ namespace  Sbnet\WeatherBundle\Services;
 class OWMWeather extends WeatherDriver implements WeatherDriverInterface
 {
     private $apiUrl = "http://api.openweathermap.org/data/2.5/";
-    private $params = "units=metric&lang=fr";
 
+    protected $parameters = "";
     protected $key = "";
 
     public function __construct($key)
@@ -28,10 +28,23 @@ class OWMWeather extends WeatherDriver implements WeatherDriverInterface
     private function makeUrl($adr)
     {
         $url = $this->apiUrl
-            .$adr
-            ."&APPID=".$this->getKey()
-            ."&".$this->params;
+              .$adr
+              ."&APPID=".$this->getKey();
+
+        if($this->parameters){
+            $url .= "&".$this->parameters;
+        }
+
         return $url;
+    }
+
+    /**
+     *
+     * @param string $parameters
+     */
+    public function setParameters($parameters)
+    {
+        $this->parameters = $parameters;
     }
 
     /**
@@ -56,6 +69,18 @@ class OWMWeather extends WeatherDriver implements WeatherDriverInterface
     public function getForecastByName($name)
     {
         $adr = $this->makeUrl("forecast?q=$name");
+        return $this->getJsonFromUrl($adr);
+    }
+
+    /**
+     * See http://openweathermap.org/forecast5
+     *
+     * @param int $id City id
+     * @return object
+     */
+    public function getForecastById($id)
+    {
+        $adr = $this->makeUrl("forecast?id=$id");
         return $this->getJsonFromUrl($adr);
     }
 }

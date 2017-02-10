@@ -37,7 +37,7 @@ $forecast = $weather->getForecastByCoord(43.93332, 4.93333);
 ## Open Weather Map
 * getForecastByCoord()
 * getForecastByName()
-* ~~getForecastById()~~
+* getForecastById()
 * ~~getCurrentByCoord()~~
 * ~~getCurrentById()~~
 * ~~getCurrentByName()~~

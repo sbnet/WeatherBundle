@@ -10,9 +10,11 @@ class Weather
         $this->driver = $driver;
     }
 
-    /**
-     *
-     */
+    public function setParameters($parameters)
+    {
+        return $this->driver->setParameters($parameters);
+    }
+
     public function getForecastByCoord($lat, $lon)
     {
         return $this->driver->getForecastByCoord($lat, $lon);
@@ -21,5 +23,10 @@ class Weather
     public function getForecastByName($name)
     {
         return $this->driver->getForecastByName($name);
+    }
+
+    public function getForecastById($id)
+    {
+        return $this->driver->getForecastById($id);
     }
 }
