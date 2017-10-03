@@ -10,29 +10,19 @@ namespace  Sbnet\WeatherBundle\Services;
 
 class WCWeather extends WeatherDriver implements WeatherDriverInterface
 {
-    private $apiUrl = "http://api.wunderground.com/api/";
-    private $parameters;
-    protected $key = "";
+    protected $apiUrl;
+    protected $key;
+    protected $parameters;
 
-    public function __construct($key)
+    public function __construct($key, $apiUrl = "http://api.wunderground.com/api/")
     {
         $this->key = $key;
+        $this->apiUrl = $apiUrl;
     }
 
     public function getKey()
     {
         return $this->key;
-    }
-
-    private function makeUrl($adr)
-    {
-        $url = $this->apiUrl
-            .$adr
-            ."/".$this->getKey()."/";
-
-        // Make and add parameters to the url here
-
-        return $url;
     }
 
     /**
@@ -49,7 +39,7 @@ class WCWeather extends WeatherDriver implements WeatherDriverInterface
         return false;
     }
 
-    public function getForecastByName($lat, $lon)
+    public function getForecastByName($name)
     {
         return false;
     }
