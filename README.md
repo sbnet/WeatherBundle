@@ -3,10 +3,12 @@
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/549b4d9d-c714-4b5f-bf9d-61ea98301bae/big.png)](https://insight.sensiolabs.com/projects/549b4d9d-c714-4b5f-bf9d-61ea98301bae)
 
 This bundle uses :
- * The [OpenWeatherMap API](http://openweathermap.org/api) - This is a work in progress
- * The [Weather Channel API](https://www.wunderground.com/weather/api) - This is planned
+ * The [OpenWeatherMap API](http://openweathermap.org/api)
  * The cache component available from the Symfony version 3.1
 
+If you need more weather drivers, it's simple to add one. Just have a look at the 
+source code and start adding one. For example, there is some libraries for the [Weather Channel API](https://www.wunderground.com/weather/api). 
+ 
 # How to use this bundle
 
 ## Just add it to your composer file
@@ -22,9 +24,17 @@ For Open Weather Map
 ```yaml
 sbnet_weather.owm.key: <key>
 ```
-Or for the Weather Channel
-```yaml
-sbnet_weather.wc.key: <key>
+
+## Activation
+Don't forget to activate it in your app/AppKernel.php file
+
+```php
+public function registerBundles()
+{
+    $bundles = [
+        ...
+        new Sbnet\WeatherBundle\SbnetWeatherBundle(),
+    ];
 ```
 
 ## You can use it from your controller
@@ -42,9 +52,6 @@ $forecast = $weather->getForecastByCoord(43.93332, 4.93333);
 * ~~getCurrentById()~~
 * ~~getCurrentByName()~~
 * ~~getIconUrlById()~~
-
-## Weather Channel
-This driver will be started when OWM driver will be finished
 
 # License
 
